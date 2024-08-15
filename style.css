@@ -1,0 +1,497 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+
+
+.mySlides {
+  display: none;
+}
+
+.slideshow-container img {
+  vertical-align: middle;
+  height: 44vh;
+  object-position: center;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 400px) {
+  .slideshow-container img {
+    height: 40vh;
+    object-fit: contain;
+  }
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+ul {
+  background-color: rgba(142, 85, 56, 0.8);
+  color: white;
+  margin: 0;
+  padding: 0.25rem;
+  padding-left: 1.5rem;
+  list-style-type: none;
+  /* This removes the bullet points */
+}
+
+li:first {
+  margin-top: 0.01rem;
+  margin-top: 0.25rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+  font-weight: normal !important;
+}
+
+.hamburger-list ul li a {
+  color: white !important;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .prev,
+  .next,
+  .text {
+    font-size: 14px;
+  }
+}
+
+a {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none !important;
+  color: #8e5538;
+  transition: opacity 0.125s linear;
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.125s linear;
+  }
+
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.container-flex {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* background-color: #fffff3; */
+  flex-wrap: wrap;
+}
+
+.nav-container {
+  height: 58px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+
+  top: 0;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.025em;
+  transition: background-color 0.2s linear;
+}
+
+.nav-container.solid-nav .nav-row a {
+  color: white;
+  font-weight: 700;
+}
+
+.nav-container.solid-nav .nav-row {
+  background-color: rgba(142, 85, 56, 0.8);
+  transition: background-color 0.2s linear;
+
+  color: white;
+}
+
+.nav-container .nav-row {
+  color: #8e5538;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 18px;
+  background: #ffffff99;
+  /* border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px; */
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container .nav-row .nav-logo {
+  font-weight: 900;
+}
+
+.nav-container .nav-row .nav-controls {
+  float: right;
+}
+
+.nav-container .nav-row .nav-controls a {
+  padding-left: 20px;
+}
+
+.container {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.cta-text {
+  margin: "3rem";
+  text-align: center;
+  max-width: 300px;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 40px;
+  color: #8e5538;
+}
+
+.mossaic {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  max-height: 60vh;
+  overflow: hidden;
+}
+
+.image-description {
+  width: 100%;
+  min-width: 30vw;
+}
+
+.nav-container .nav-row .nav-logo {
+  gap: 15px;
+}
+
+.dps-logo {
+  height: 65px;
+  width: 75px;
+}
+
+@media screen and (max-width: 350px) {
+  .nav-container .nav-row .nav-controls a {
+    font-size: small;
+    padding-left: 10px;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .mossaic {
+    height: 22vh;
+  }
+
+  .section-heading {
+    font-size: 30px;
+  }
+
+  .description {
+    text-align: justify;
+  }
+
+  .image-description {
+    width: 100vw;
+  }
+
+  .location-template {
+    padding: 0px;
+  }
+
+  .nav-container.solid-nav .nav-row {
+    background-color: rgba(142, 85, 56, 0.8);
+    transition: background-color 0.2s linear;
+    height: max-content;
+    color: white;
+  }
+
+  .nav-container .nav-row .nav-logo {
+    gap: 45px;
+  }
+
+  .nav-controls {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.cta-text {
+  margin-bottom: 20px;
+}
+
+/* menu css  */
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.line {
+  fill: none;
+  stroke: rgba(142, 85, 56, 0.8);
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.solid-nav .line {
+  stroke: #ffffff;
+  /* This sets the stroke color to white when .solid-nav is present */
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.hamburger-list {
+  display: none;
+}
+
+.hamburger-list.opened {
+  display: block;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-250px * 12));
+  }
+}
+
+.library-slider:hover .library-card {
+  animation-play-state: paused;
+}
+
+.library-slider {
+  animation: 45s slide infinite linear;
+  display: flex;
+  width: calc(250px * 6);
+
+  gap: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  scroll-padding: 15px;
+}
+
+.library-card img {
+  height: 300px;
+  width: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.library-card .library-content h2 {
+  margin: 0;
+}
+
+.library-card .library-content {
+  height: 100px;
+}
+
+.library-card {
+  border-radius: 16px;
+}
+
+.infinite-slider {
+  overflow: hidden;
+}
